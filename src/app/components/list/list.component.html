@@ -1,0 +1,31 @@
+<table class="border-collapse border border-gray-400 w-full">
+  <thead>
+    <tr>
+      @for (header of headerList; track header) {
+        <th class="border text-sm border-gray-300 text-left p-2">{{header}}</th>
+      }
+      
+    </tr>
+  </thead>
+  <tbody>
+
+    @for (product of productList(); track product.id) {
+      <tr class="p-2">
+        <td class="border border-gray-300 p-1">
+          <img class="w-15 h-15 m-auto" [src]="product?.image" alt="{{product.image}}">
+        </td>
+        <td class="border border-gray-300 p-1">
+          {{product?.title}}
+        </td>
+        <!-- <td class="p-1">{{product?.description}}</td> -->
+        <td class="border border-gray-300 p-1 w-30">{{product?.price}}</td>
+        <td class="border border-gray-300 p-1 w-30">
+          <span style="color: #f39c12; font-weight: bold">★</span>
+          {{product?.rating?.rate}}
+          ({{product?.rating?.count}})
+        </td>
+      </tr>
+    }
+    
+  </tbody>
+</table>

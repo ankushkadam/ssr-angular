@@ -1,0 +1,14 @@
+<div class="p-3 w-full h-dvh font-mono">
+  <div class="page-header flex justify-between items-center shadow-md p-2">
+    <h6 class="font-extrabold">Product List</h6>
+    <button (click)="viewHandler($event)"
+    class="rounded-sm h-6 text-xs px-1 font-extrabold shadow-md bg-blue-400 cursor-pointer">{{selectedView}} View</button>
+  </div>
+  <div class="product-wrapper h-[calc(100%-3rem)] p-3 shadow-md overflow-hidden overflow-y-auto">
+    @if (selectedView === 'List') {
+      <app-list [productList]="productList"></app-list>
+    }@else {
+      <app-grid [productList]="productList"></app-grid>
+    }
+  </div>
+</div>
