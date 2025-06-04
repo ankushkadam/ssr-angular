@@ -15,10 +15,12 @@
           <img class="w-15 h-15 m-auto" [src]="product?.image" alt="{{product.image}}">
         </td>
         <td class="border border-gray-300 p-1">
-          {{product?.title}}
+          <a [routerLink]="['/products', product.id]">
+            {{product?.title}}
+          </a>
         </td>
         <!-- <td class="p-1">{{product?.description}}</td> -->
-        <td class="border border-gray-300 p-1 w-30">{{product?.price}}</td>
+        <td class="border border-gray-300 p-1 w-30"> ₹{{product?.price}}</td>
         <td class="border border-gray-300 p-1 w-30">
           <span style="color: #f39c12; font-weight: bold">★</span>
           {{product?.rating?.rate}}

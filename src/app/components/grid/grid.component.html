@@ -8,7 +8,11 @@
         </div>
   
         <div class="card-content pt-2 border-t-1 border-gray-300 p-2">
-          <h6 class="title font-bold text-sm">{{product?.title}}</h6>
+          <h6 class="title font-bold text-sm">
+            <a [routerLink]="['/products', product.id]">
+              {{product?.title}}
+            </a>
+          </h6>
           <h4 class="price">₹{{product?.price}}</h4>
     
           <div  style="color: #f39c12; font-weight: bold">

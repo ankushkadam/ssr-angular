@@ -15,4 +15,9 @@ export class ProductService {
     const result = await lastValueFrom(this.http.get('https://fakestoreapi.com/products'));
     return result as Product[];
   } 
+
+  async getProductById(id: string): Promise<Product> {
+    const result = await lastValueFrom(this.http.get(`https://fakestoreapi.com/products/${id}`));
+    return result as Product;
+  }
 }

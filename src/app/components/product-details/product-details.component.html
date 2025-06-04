@@ -1,0 +1,27 @@
+<div class="product-details h-dvh items-center grid">
+
+  <div class="card-grid m-auto shadow-md p-3 rounded-lg" style="width: 60%;">
+    <h2 class="font-sans text-2xl mb-10">Product Details :</h2>
+
+    <div class="flex items-center">
+      <div class="image-wrapper w-md h-md">
+        <img [src]="product?.image" class="object-fit-cover" alt="{{product?.image}}">
+      </div>
+      <div class="content-wrapper pl-5">
+        <div>
+          <span class=""> {{product?.id}}</span> 
+          ({{product?.category}})</div>
+        <div class="py-2 text-slate-700">{{product?.title}}</div>
+        <div class="font-medium pb-5">{{product?.description}}</div>
+        <div class="pb-5">₹ {{product?.price}}</div>
+        <div>
+          <span style="color: #f39c12; font-weight: bold">★</span>
+          {{product?.rating?.rate}} 
+          ({{product?.rating?.count}})
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+</div>

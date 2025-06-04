@@ -1,9 +1,10 @@
 import { Component, input, Input } from '@angular/core';
 import { Product } from '../../model/product.model';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-list',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './list.component.html',
   styleUrl: './list.component.scss'
 })
